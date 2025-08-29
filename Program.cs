@@ -1,0 +1,16 @@
+﻿
+
+partial class Program
+{
+    static void Main(String[] arg)
+    {
+        // Variables();
+        //DataTypes();
+        // ShowNuericTypes();
+        // ShowStringType();
+        //SalesReport();
+        //SalaryCalculator();
+        //ShowTime();
+        DaysOfLife();
+    }
+}
