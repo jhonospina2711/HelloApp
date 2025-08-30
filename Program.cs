@@ -11,6 +11,7 @@ partial class Program
         //SalesReport();
         //SalaryCalculator();
         //ShowTime();
-        DaysOfLife();
+        //DaysOfLife();
+        DaysUnilNextBirthDay();
     }
 }
