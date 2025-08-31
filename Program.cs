@@ -13,6 +13,8 @@ partial class Program
         //ShowTime();
         //DaysOfLife();
         //DaysUnilNextBirthDay();
-        TypeDifference();
+        //TypeDifference();
+        //HandleNullables();
+        Operators();
     }
 }
