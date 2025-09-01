@@ -16,7 +16,17 @@ partial class Program
         //Tamaño arreglo
         Console.WriteLine($"El numero de elementos es: {numbersArray.Length}");
 
-
-
+        //Desde el final del arreglo ^
+        //Nota: Para obtener el simbolo ^ se usa alt + 94
+        Console.WriteLine($"El ultimo elemento es: {numbersArray[^1]}");
+        Console.WriteLine($"Penultimo elemento es: {numbersArray[^2]}");
+        //Rangos para obtener subarreglos
+        int[] firstThree = numbersArray[..3];
+        int[] fromIndexTwo = numbersArray[2..];
+        Console.WriteLine($"Los primeros tres {firstThree}");
+        foreach(var number in firstThree)
+        {
+            Console.WriteLine($"Elemento: {number}");
+        }
     }
 }
