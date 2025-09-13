@@ -7,6 +7,6 @@ partial class Program
         bool isTrue = true;
         char character = 'A';
         string text = "Hola mundo";
-        Console.WriteLine($"Integer: {integer}, Decimal: {doubleNumber}, Boolean: {isTrue}, Character: {character}, String: {text}");
+        WriteLine($"Integer: {integer}, Decimal: {doubleNumber}, Boolean: {isTrue}, Character: {character}, String: {text}");
     }
 }

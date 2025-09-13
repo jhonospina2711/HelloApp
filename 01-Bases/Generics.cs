@@ -5,11 +5,11 @@ partial class Program
         string[] names = { "Juan", "Luis", "Diana" };
         int[] numbers = { 1, 2, 3, 25 };
         //Impresión de funciones sin el uso de genericos
-        //Console.WriteLine($"El tamaño del areglo númerico es: {GetIntArrayLength(numbers)}");
-        //Console.WriteLine($"El tamaño del areglo nombres es: {GetStringArrayLength(names)}");
+        //WriteLine($"El tamaño del areglo númerico es: {GetIntArrayLength(numbers)}");
+        //WriteLine($"El tamaño del areglo nombres es: {GetStringArrayLength(names)}");
         //Impresión de funciones con el uso de genericos
-        Console.WriteLine($"El tamaño del areglo númerico es: {GetArrayLength(numbers)}");
-        Console.WriteLine($"El tamaño del areglo nombres es: {GetArrayLength(names)}");
+        WriteLine($"El tamaño del areglo númerico es: {GetArrayLength(numbers)}");
+        WriteLine($"El tamaño del areglo nombres es: {GetArrayLength(names)}");
 
         //Instanciación de la clase genérica
 
@@ -42,7 +42,7 @@ partial class Program
         public T? Content { get; set; }
         public void Show()
         {
-            Console.WriteLine($"El contenido de la caja es: {Content}");
+            WriteLine($"El contenido de la caja es: {Content}");
         }
     }
 }

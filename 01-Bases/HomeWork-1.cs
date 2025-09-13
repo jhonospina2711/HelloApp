@@ -6,16 +6,16 @@ partial class Program
         int quantitySold = 3;
         double unitPrecio = 750.99;
         double totalAmount = quantitySold * unitPrecio;
-        Console.WriteLine($"Product: {product}");
-        Console.WriteLine($"Cantidad vendida: {quantitySold}");
-        Console.WriteLine($"Total generado: {totalAmount:C}");
+        WriteLine($"Product: {product}");
+        WriteLine($"Cantidad vendida: {quantitySold}");
+        WriteLine($"Total generado: {totalAmount:C}");
 
     }
 
     static void SalaryCalculator()
     {
 
-        Console.WriteLine("Calculadora de Salario");
+        WriteLine("Calculadora de Salario");
 
         Console.Write("Ingrese su nombre: ");
         string name = Console.ReadLine() ?? "Trabajador No Identificado";
@@ -36,6 +36,6 @@ partial class Program
         double totalSalario = valorHoraTrabajada * horasTrabajadas;
 
         //* Devolvemos al usuario el resultado
-        Console.WriteLine($"El trabajador {name}, obtuvo un salario de: {totalSalario:C} por {horasTrabajadas} horas trabajadas.");
+        WriteLine($"El trabajador {name}, obtuvo un salario de: {totalSalario:C} por {horasTrabajadas} horas trabajadas.");
     }
 }

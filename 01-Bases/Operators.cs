@@ -10,22 +10,22 @@ partial class Program
 
         if (isEven && isGreaterThanTen)
         {
-            Console.WriteLine($"El número {number} es par y mayor que 10.");
+            WriteLine($"El número {number} es par y mayor que 10.");
 
         }
         else if (!isEven && isGreaterThanTen)
         {
-            Console.WriteLine($"El número {number} es par y mayor que 10.");
+            WriteLine($"El número {number} es par y mayor que 10.");
         }
         else
         {
-            Console.WriteLine($"El número {number} no cumple con las indicaciones.");
+            WriteLine($"El número {number} no cumple con las indicaciones.");
         }
 
         // Operador ternetio (?:)
 
         int age = 15;
         string category = age > 18 ? "Adulto" : "Menor de edad";
-        Console.WriteLine(category);
+        WriteLine(category);
     }
 }
