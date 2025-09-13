@@ -11,6 +11,13 @@ partial class Program
         Console.WriteLine($"El tamaño del areglo númerico es: {GetArrayLength(numbers)}");
         Console.WriteLine($"El tamaño del areglo nombres es: {GetArrayLength(names)}");
 
+        //Instanciación de la clase genérica
+
+        Box<int> numberBox = new Box<int> { Content = 50 };
+        Box<string> stringBox = new Box<string> { Content = "Ahora soy Texto" };
+        numberBox.Show();
+        stringBox.Show();
+
     }
 
     //Metodos sin el uso de genericos
@@ -28,5 +35,14 @@ partial class Program
     static int GetArrayLength<T>(T[] array)
     {
         return array.Length;
+    }
+
+    class Box<T>
+    {
+        public T? Content { get; set; }
+        public void Show()
+        {
+            Console.WriteLine($"El contenido de la caja es: {Content}");
+        }
     }
 }
