@@ -5,7 +5,7 @@ partial class Program
     {
         DateTime birthDate = new DateTime(1987, 07,11);
         TimeSpan difference = DateTime.Now - birthDate;
-        Console.WriteLine($"Has vivido {difference.Days} días");
+        WriteLine($"Has vivido {difference.Days} días");
     }
 
     
@@ -32,11 +32,11 @@ partial class Program
                 nextBirthday = nextBirthday.AddYears(1);
             }
             TimeSpan daysLeft = nextBirthday - DateTime.Now;
-            Console.WriteLine($"Faltan {daysLeft.Days} días para su próximo cumpleaños.");
+            WriteLine($"Faltan {daysLeft.Days} días para su próximo cumpleaños.");
         }
         catch (FormatException)
         {
-            Console.WriteLine("El formato de la fecha es incorrecto. Por favor, use el formato (dd/mm/aaaa).");
+            WriteLine("El formato de la fecha es incorrecto. Por favor, use el formato (dd/mm/aaaa).");
         }
 
     }

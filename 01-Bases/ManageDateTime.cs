@@ -15,11 +15,11 @@ partial class Program
         //* Devuelve un dia de la semana en nombre ejemplo: Lunes, Martes, Miercoles
         DayOfWeek weekDay = now.DayOfWeek;
 
-        Console.WriteLine($"Fecha y hora actual: {now}");
-        Console.WriteLine($"Fecha actual: {today}");
-        Console.WriteLine($"Hace una semana la fecha {now} era { nowWeekAgo.ToString("dd/MM/yyyy")}");
-        Console.WriteLine($"Fecha personalizada: {customDate}");
-        Console.WriteLine($"Día de la semana {weekDay}");
+        WriteLine($"Fecha y hora actual: {now}");
+        WriteLine($"Fecha actual: {today}");
+        WriteLine($"Hace una semana la fecha {now} era { nowWeekAgo.ToString("dd/MM/yyyy")}");
+        WriteLine($"Fecha personalizada: {customDate}");
+        WriteLine($"Día de la semana {weekDay}");
 
     }
 
