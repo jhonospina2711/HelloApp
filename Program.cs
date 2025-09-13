@@ -21,6 +21,7 @@ partial class Program
         // ListDictionary();
         // DataStructures();
         // Generics();
-        Conditionals();
+        // Conditionals();
+        Loops();
     }
 }
