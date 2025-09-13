@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tamac\\Documents\\DevTalles\\CursoScharp\\HelloApp\\HelloApp.csproj": {}
+    "C:\\Users\\tamac\\Documents\\1.Desarrollo\\DevTalles\\CursoScharp\\HelloApp\\HelloApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tamac\\Documents\\DevTalles\\CursoScharp\\HelloApp\\HelloApp.csproj": {
+    "C:\\Users\\tamac\\Documents\\1.Desarrollo\\DevTalles\\CursoScharp\\HelloApp\\HelloApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tamac\\Documents\\DevTalles\\CursoScharp\\HelloApp\\HelloApp.csproj",
+        "projectUniqueName": "C:\\Users\\tamac\\Documents\\1.Desarrollo\\DevTalles\\CursoScharp\\HelloApp\\HelloApp.csproj",
         "projectName": "HelloApp",
-        "projectPath": "C:\\Users\\tamac\\Documents\\DevTalles\\CursoScharp\\HelloApp\\HelloApp.csproj",
+        "projectPath": "C:\\Users\\tamac\\Documents\\1.Desarrollo\\DevTalles\\CursoScharp\\HelloApp\\HelloApp.csproj",
         "packagesPath": "C:\\Users\\tamac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tamac\\Documents\\DevTalles\\CursoScharp\\HelloApp\\obj\\",
+        "outputPath": "C:\\Users\\tamac\\Documents\\1.Desarrollo\\DevTalles\\CursoScharp\\HelloApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tamac\\AppData\\Roaming\\NuGet\\NuGet.Config"
