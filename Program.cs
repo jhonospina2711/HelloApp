@@ -29,7 +29,8 @@ partial class Program
         // FizzBuzz();
         // LoopControlExamples();
         // LoopGame();
-        Conversions();
+        // Conversions();
+        ConvertionToDateTime();
         #endregion
     }
 }
