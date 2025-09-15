@@ -4,6 +4,7 @@ partial class Program
 {
     static void Main(String[] arg)
     {
+        #region Seccion 2
         // Variables();
         //DataTypes();
         // ShowNuericTypes();
@@ -21,8 +22,14 @@ partial class Program
         // ListDictionary();
         // DataStructures();
         // Generics();
+        #endregion
+        #region Seccion 3
         // Conditionals();
         // Loops();
-        FizzBuzz();
+        // FizzBuzz();
+        // LoopControlExamples();
+        // LoopGame();
+        Conversions();
+        #endregion
     }
 }
