@@ -30,7 +30,10 @@ partial class Program
         // LoopControlExamples();
         // LoopGame();
         // Conversions();
-        ConvertionToDateTime();
+        // ConvertionToDateTime();
+        // Functions();
+        // PrintMultiplicationTable(tabletLimit:  15, number: 10 );
+        PrintFactorialTable(5);
         #endregion
     }
 }
