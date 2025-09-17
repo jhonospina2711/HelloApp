@@ -39,7 +39,8 @@ partial class Program
         #endregion
         #region Seccion 4
         //TestingClasses();
-        Properties();
+        // Properties();
+        Methods();
          #endregion
     }
 }
