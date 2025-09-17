@@ -35,7 +35,10 @@ partial class Program
         // PrintMultiplicationTable(tabletLimit:  15, number: 10 );
         // PrintFactorialTable(5);
         // Tuples();
-        AnonymousFunctions();
+        //AnonymousFunctions();
         #endregion
+        #region Seccion 4
+        TestingClasses();
+         #endregion
     }
 }
