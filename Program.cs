@@ -41,6 +41,10 @@ partial class Program
         //TestingClasses();
         // Properties();
         Methods();
+        //Forzar una recoleccion de basura
+        GC.Collect();
+        //Ejecuten los finalizadores
+        GC.WaitForPendingFinalizers();
          #endregion
     }
 }
