@@ -7,14 +7,35 @@ partial class Program
         car.Model = "Yaris";
         car.Year = 2022;
         WriteLine(car.ShowInfo());
-        car.ShowMessage();
-        car.ShowMessage("Cambiando de modelo");
-        //Cambiamos el modelo del auto
-        car.ChangeModel("Patrol");
-        WriteLine(car.ShowInfo());
+        // car.ShowMessage();
+        // car.ShowMessage("Cambiando de modelo");
+        // //Cambiamos el modelo del auto
+        // car.ChangeModel("Patrol");
+        // WriteLine(car.ShowInfo());
 
+        // Car.GeneralInfo();
 
-        Car.GeneralInfo();
+        //Instanciamos un objetos a traves de un constructor
+        Car sportsCar = new Car("Ferrari", 2020);
+        WriteLine(sportsCar.ShowInfo());
+
+        //Otra forma de instanciar un objeto usando la sintaxis simplifcada
+        Car collectionCar = new() { Model = "Cadillac", Year = 1960 };
+        WriteLine(collectionCar.ShowInfo());
+
+        //Lista de objetos
+        List<Car> cars = new()
+        {
+            new Car(){Model="Duster", Year=2021},
+            new Car(){Model="StepWay", Year=2019},
+            new Car(){Model="Capture", Year=2000},
+        };
+        //recorremos la lista
+        WriteLine("Listado de autómoviles:");
+        foreach (var item in cars)
+        {
+            WriteLine(item.ShowInfo());
+        }
     }
     class Car
     {
@@ -22,6 +43,15 @@ partial class Program
         public string? Model { get; set; }
         //Se define la propiedad Year como nullable
         public int? Year { get; set; }
+
+        public Car(string model, int year)
+        {
+            Model = model;
+            Year = year;
+        }
+
+        //Se crea un constructor sin parametros
+        public Car() { }
 
         //Este metodo es para cambiar una propiedad del objeto
         public void ChangeModel(string newModel)
