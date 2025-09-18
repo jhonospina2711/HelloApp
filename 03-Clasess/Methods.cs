@@ -16,7 +16,7 @@ partial class Program
         // Car.GeneralInfo();
 
         //Instanciamos un objetos a traves de un constructor
-        Car sportsCar = new Car("Ferrari", 2020);
+        Car sportsCar = new ("Ferrari", 2020);
         WriteLine(sportsCar.ShowInfo());
 
         //Otra forma de instanciar un objeto usando la sintaxis simplifcada
@@ -44,6 +44,7 @@ partial class Program
         //Se define la propiedad Year como nullable
         public int? Year { get; set; }
 
+        //Se crea un constructor con parametros
         public Car(string model, int year)
         {
             Model = model;
@@ -52,6 +53,14 @@ partial class Program
 
         //Se crea un constructor sin parametros
         public Car() { }
+
+        //Destructor (~)
+        ~Car()
+        {
+            WriteLine("Destructor llamado. Recurso liberado.");
+        }
+
+
 
         //Este metodo es para cambiar una propiedad del objeto
         public void ChangeModel(string newModel)
