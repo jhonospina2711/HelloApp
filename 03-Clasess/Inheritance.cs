@@ -26,6 +26,12 @@ partial class Program
     {
         public string? House { get; set; }
 
+        public override void Greet()
+        {
+            WriteLine($"Hola, soy {Name} y soy estudiante");
+        }
+        
+
         public void ShowHouse()
         {
             WriteLine($"Pertenezco a la casa {House} en Hogwarts.");
@@ -35,6 +41,12 @@ partial class Program
     class HogwartsProfessor : Character
     {
         public string? Subject { get; set; }
+
+        // Override del método Greet
+        public override void Greet()
+        {
+            WriteLine($"Hola, soy {Name} y soy profesor");
+        }
 
         public void MySubject()
         {
