@@ -47,7 +47,9 @@ partial class Program
         // GC.WaitForPendingFinalizers();
         // ProductSalesDemo();
         // BusFleet();
-        Inheritance();
+        // Inheritance();
+        // AbstracClassExamples();
+        Visibility();
          #endregion
     }
 }
