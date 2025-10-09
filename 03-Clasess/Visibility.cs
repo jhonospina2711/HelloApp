@@ -72,7 +72,11 @@ class Jedi : IForceUser
 
 }
 
-//Se puede tener herencia con interfaces
+// Se puede tener herencia con interfaces
+// La clase Sith hereda de Jedi que es otra clase y de IForceUser que es una interfaz
+// Solo se puede heredar de una clase, pero se pueden implementar multiples interfaces
+// Una interfaz no contiene implementación de la solución, solo la firma del contrato
+// Una clase puede implementar multiples interfaces
 class Sith : Jedi, IForceUser
 {
     public new void UseForce()
