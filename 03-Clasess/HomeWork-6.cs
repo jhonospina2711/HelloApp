@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 /*
 =============
 🏆 Ejercicio 
@@ -31,12 +34,65 @@
 //
 // 7. Recorrer la lista de empleados y mostrar la información de cada uno con el método "ShowInfo()".
 
+class Employee
+{
+    protected string? Name { get; set; }
+    protected double Salary { get; set; }
+    protected string? Position { get; set; }
+
+
+    // 2. Implementar un constructor en "Employee" que inicialice sus valores.
+    public Employee(string name, double salary, string position)
+    {
+        Name = name;
+        Salary = salary;
+        Position = position;
+    }
+
+    public virtual double CalculateBonus()
+    {
+        return Salary * 0.05;
+    }
+
+    public void ShowInfo()
+    {
+        Console.WriteLine($"Empleado: {Name}, Cargo: {Position}, Salario: {Salary:C}, Bono: {CalculateBonus():C}");
+    }
+}
+
+class TeamLeader : Employee
+{
+    public TeamLeader(string name, double salary) : base(name, salary, "Team Leader") { }
+
+    public override double CalculateBonus()
+    {
+        return Salary * 0.10;
+    }
+}
+
+class Developer : Employee
+{
+    public Developer(string name, double salary) : base(name, salary, "Developer") { }
+
+    public override double CalculateBonus()
+    {
+        return Salary * 0.07;
+    }
+}
+
 partial class Program
 {
-    public void Employee()
+    static void ShoeEmployessInformation()
     {
-        string name;
-        double salary;
-        string position;
+        List<Employee> employees = new List<Employee>();
+        employees.Add(new TeamLeader("Carlos", 5000));
+        employees.Add(new Developer("Ana", 4000));
+        employees.Add(new TeamLeader("Laura", 6000));
+        employees.Add(new Developer("Luis", 3500));
+        WriteLine("Lista de empleados: ");
+        foreach (var employes in employees)
+        {
+            employes.ShowInfo();
+        }
     }
 }
