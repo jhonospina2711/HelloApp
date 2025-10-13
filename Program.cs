@@ -50,7 +50,10 @@ partial class Program
         // Inheritance();
         // AbstracClassExamples();
         //Visibility();
-        ShoeEmployessInformation();
+        //ShoeEmployessInformation();
+        #endregion
+        #region Seccion 5
+        HandleException();
         #endregion
     }
 }
