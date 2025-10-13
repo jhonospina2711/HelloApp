@@ -53,7 +53,8 @@ partial class Program
         //ShoeEmployessInformation();
         #endregion
         #region Seccion 5
-        HandleException();
+        //HandleException();
+        Collections();
         #endregion
     }
 }
