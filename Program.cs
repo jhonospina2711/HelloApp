@@ -55,7 +55,9 @@ partial class Program
         #region Seccion 5
         //HandleException();
         // Collections();
-        Linq();
+        //Linq();
+        //AdvancedLinq.Program.AdvancedLINQ();
+        SalesAnalysis();
         #endregion
     }
 }
