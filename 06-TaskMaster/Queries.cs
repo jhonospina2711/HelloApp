@@ -134,7 +134,7 @@ namespace TaskMaster
         ResetColor();
         Clear();
         WriteLine("------Eliminar Tarea------");
-        Write("Ingrese el ID de la tarea a Eliminar: ");
+        Write("Ingrese el ID de la tarea que desea eliminar: ");
         var id = ReadLine();
         Task task = Tasks.Find(t => t.Id == id)!;
         //Valida que la tarea exista
@@ -161,6 +161,52 @@ namespace TaskMaster
         return Tasks;
       }
 
+    }
+
+    public void TasksByState()
+    {
+      Clear();
+      try
+      {
+        ResetColor();
+        WriteLine("------Consultar tareas por estado------");
+        WriteLine("1. Completadas");
+        WriteLine("2. Pendientes");
+        Write("Seleccione la opción de las tareas a mostrar: ");
+        string taskState = ReadLine()!;
+        if (taskState != "1" && taskState != "2")
+        {
+          ForegroundColor = ConsoleColor.Red;
+          WriteLine("Opción inválida");
+          ResetColor();
+          return;
+        }
+        bool isCompleted = taskState == "1";
+        List<Task> filteredTasks = Tasks.Where(t => t.Completed == isCompleted).ToList();
+        if (filteredTasks.Count == 0)
+        {
+          ForegroundColor = ConsoleColor.Red;
+          WriteLine("No se encontrarón tareas con el estado solicitado.");
+          ResetColor();
+          return;
+        }
+        ForegroundColor = isCompleted ? ConsoleColor.Green : ConsoleColor.Red;
+        //Muestra las tareas filtradas
+        Table table = new Table("Id", "Descripción", "Estado");
+        foreach (var task in filteredTasks)
+        {
+          table.AddRow(task.Id, task.Description, task.Completed ? "Completada" : "");
+        }
+
+        table.Config = TableConfiguration.Unicode();
+
+        Write(table.ToString());
+        ReadKey();
+      }
+      catch (Exception ex)
+      {
+        WriteLine($"Ocurrio un error al filtrar las tareas por estado: {ex.Message}");
+      }
     }
 
   }
