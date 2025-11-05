@@ -36,7 +36,7 @@ namespace TaskMaster
         Clear();
         WriteLine("Ingrese la descripción de la nueva tarea:");
         var description = ReadLine();
-        Task newTask = new Task(Utils.GenerateId(), description);
+        Task newTask = new Task(Utils.GenerateId(), description!);
         Tasks.Add(newTask);
         ForegroundColor = ConsoleColor.Green;
         WriteLine("¡Tarea agregada con éxito!");
@@ -76,7 +76,45 @@ namespace TaskMaster
         //Hora de modificación
         task.ModifiedAt = DateTime.Now;
         ForegroundColor = ConsoleColor.Green;
-        WriteLine("¡Tarea marcar como completada con éxito!");
+        WriteLine("¡Tarea marcada como completada con éxito!");
+        ResetColor();
+        return Tasks;
+      }
+      catch (Exception ex)
+      {
+        ForegroundColor = ConsoleColor.Red;
+        WriteLine($"Ocurrió un error al agregar la tarea: {ex.Message}");
+        return Tasks;
+      }
+
+    }
+    public List<Task> EditTask()
+    {
+      try
+      {
+        ResetColor();
+        Clear();
+        WriteLine("------Editar tarea------");
+        Write("Ingrese el ID de la tarea a editar: ");
+        var id = ReadLine();
+        Task task = Tasks.Find(t => t.Id == id)!;
+        //Valida que la tarea exista
+        if (task == null)
+        {
+          ForegroundColor = ConsoleColor.Red;
+          WriteLine("No se encontró una tarea con el ID proporcionado.");
+          ResetColor();
+          return Tasks;
+
+        }
+        Write("Ingrese la nueva descripción de la tarea: ");
+
+        var description = ReadLine();
+        task.Description = description;
+        //Hora de modificación
+        task.ModifiedAt = DateTime.Now;
+        ForegroundColor = ConsoleColor.Green;
+        WriteLine("¡Tarea modificada con éxito!");
         ResetColor();
         return Tasks;
       }

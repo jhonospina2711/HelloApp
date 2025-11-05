@@ -38,7 +38,7 @@ namespace TaskMaster
             MarkAsCompleted();
             break;
           case "4":
-            // EditTask();
+            EditTask();
             break;
           case "5":
             // RemoveTask();
@@ -80,6 +80,21 @@ namespace TaskMaster
       try
       {
         var task = queries.MarkAsCompleted();
+        fileActions.WriteFile(task);
+      }
+      catch (Exception ex)
+      {
+        WriteLine($"Ocurrió un problema al marcar la tarea como completada: {ex.Message}");
+      }
+
+    }
+
+    public static void EditTask()
+    {
+      try
+      {
+        var task = queries.EditTask();
+        fileActions.WriteFile(task);
       }
       catch (Exception ex)
       {
