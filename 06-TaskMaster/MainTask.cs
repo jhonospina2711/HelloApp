@@ -41,7 +41,7 @@ namespace TaskMaster
             EditTask();
             break;
           case "5":
-            // RemoveTask();
+            RemoveTask();
             break;
           case "6":
             //TasksByState();
@@ -98,7 +98,20 @@ namespace TaskMaster
       }
       catch (Exception ex)
       {
-        WriteLine($"Ocurrió un problema al marcar la tarea como completada: {ex.Message}");
+        WriteLine($"Ocurrió un problema al editar la tarea: {ex.Message}");
+      }
+
+    }
+     public static void RemoveTask()
+    {
+      try
+      {
+        var task = queries.RemoveTask();
+        fileActions.WriteFile(task);
+      }
+      catch (Exception ex)
+      {
+        WriteLine($"Ocurrió un problema al Eliminar la tarea: {ex.Message}");
       }
 
     }

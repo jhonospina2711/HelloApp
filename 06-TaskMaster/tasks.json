@@ -1,13 +1,5 @@
 [
   {
-    "Id": "05dc700",
-    "Description": "Pintar el cuarto de baño",
-    "Completed": true,
-    "CreatedAt": "2024-04-15T00:00:00",
-    "ModifiedAt": "2025-11-05T00:39:54.7811067-05:00",
-    "Deleted": true
-  },
-  {
     "Id": "f73d8fd",
     "Description": "Comer saludable",
     "Completed": false,
