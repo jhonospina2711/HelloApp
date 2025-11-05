@@ -47,7 +47,7 @@ namespace TaskMaster
             queries.TasksByState();
             break;
           case "7":
-            //TasksByDescription();
+            queries.TasksByDescription();
             break;
           case "8":
             salir = true;
